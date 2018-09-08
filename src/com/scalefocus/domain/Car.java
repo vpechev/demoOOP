@@ -5,7 +5,7 @@ import com.scalefocus.common.EngineType;
 
 public class Car {
     // ############## BEGIN PROPERTIES ##############
-    private EngineType carType;
+    private EngineType engineType;
     private int engineVolume;
     private int horsePowers;
     private Color color;
@@ -14,8 +14,8 @@ public class Car {
     // ############## Begin CONSTRUCTORS ##############
     public Car(){}
 
-    public Car(EngineType carType, int engineVolume, int horsePowers, Color color){
-        this.carType = carType;
+    public Car(EngineType engineType, int engineVolume, int horsePowers, Color color){
+        this.engineType = engineType;
         this.engineVolume = engineVolume;
         this.horsePowers = horsePowers;
         this.color = color;
@@ -23,12 +23,12 @@ public class Car {
     // ############## END CONSTRUCTORS ##############
 
     // ############## Begin GETTERS & SETTERS ##############
-    public EngineType getCarType() {
-        return carType;
+    public EngineType getEngineType() {
+        return engineType;
     }
 
-    public void setCarType(EngineType carType) {
-        this.carType = carType;
+    public void setEngineType(EngineType engineType) {
+        this.engineType = engineType;
     }
 
     public int getEngineVolume() {
@@ -59,7 +59,7 @@ public class Car {
     @Override
     public String toString() {
         return "Car{" +
-                "carType=" + carType +
+                "engineType=" + engineType +
                 ", engineVolume=" + engineVolume +
                 ", horsePowers=" + horsePowers +
                 ", color=" + color +
