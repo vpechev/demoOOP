@@ -5,7 +5,7 @@ import com.scalefocus.common.EngineType;
 
 public class Car {
     // ############## BEGIN PROPERTIES ##############
-    public EngineType carType;
+    public EngineType engineType;
     public int engineVolume;
     public int horsePowers;
     public Color color;
@@ -14,8 +14,8 @@ public class Car {
     // ############## Begin CONSTRUCTORS ##############
     public Car(){}
 
-    public Car(EngineType carType, int engineVolume, int horsePowers, Color color){
-        this.carType = carType;
+    public Car(EngineType engineType, int engineVolume, int horsePowers, Color color){
+        this.engineType = engineType;
         this.engineVolume = engineVolume;
         this.horsePowers = horsePowers;
         this.color = color;
