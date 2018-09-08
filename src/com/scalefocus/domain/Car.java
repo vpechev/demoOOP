@@ -3,22 +3,69 @@ package com.scalefocus.domain;
 import com.scalefocus.common.Color;
 import com.scalefocus.common.EngineType;
 
-public class Car {
+public abstract class Car {
     // ############## BEGIN PROPERTIES ##############
-    public EngineType carType;
+    public EngineType engineType;
     public int engineVolume;
     public int horsePowers;
     public Color color;
     // ############## END PROPERTIES ##############
 
     // ############## Begin CONSTRUCTORS ##############
-    public Car(){}
+    public Car(EngineType engineType){
+        this.engineType = engineType;
+    }
 
-    public Car(EngineType carType, int engineVolume, int horsePowers, Color color){
-        this.carType = carType;
+    protected Car(EngineType engineType, int engineVolume, int horsePowers, Color color){
+        this(engineType);
+
         this.engineVolume = engineVolume;
         this.horsePowers = horsePowers;
         this.color = color;
     }
     // ############## END CONSTRUCTORS ##############
+
+    // ############## BEGIN GETTERS & SETTERS ##############
+    public EngineType getEgineType() {
+        return engineType;
+    }
+
+    protected void setEngineType(EngineType engineType) {
+        this.engineType = engineType;
+    }
+
+    public int getEngineVolume() {
+        return engineVolume;
+    }
+
+    public void setEngineVolume(int engineVolume) {
+        this.engineVolume = engineVolume;
+    }
+
+    public int getHorsePowers() {
+        return horsePowers;
+    }
+
+    public void setHorsePowers(int horsePowers) {
+        this.horsePowers = horsePowers;
+    }
+
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
+    // ############## END GETTERS & SETTERS ##############
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "engineType=" + engineType +
+                ", engineVolume=" + engineVolume +
+                ", horsePowers=" + horsePowers +
+                ", color=" + color +
+                '}';
+    }
 }
