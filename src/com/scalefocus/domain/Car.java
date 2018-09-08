@@ -5,10 +5,10 @@ import com.scalefocus.common.EngineType;
 
 public class Car {
     // ############## BEGIN PROPERTIES ##############
-    public EngineType carType;
-    public int engineVolume;
-    public int horsePowers;
-    public Color color;
+    private EngineType carType;
+    private int engineVolume;
+    private int horsePowers;
+    private Color color;
     // ############## END PROPERTIES ##############
 
     // ############## Begin CONSTRUCTORS ##############
