@@ -3,7 +3,7 @@ package com.scalefocus.domain;
 import com.scalefocus.common.Color;
 import com.scalefocus.common.EngineType;
 
-public abstract class Car {
+public class Car {
     // ############## BEGIN PROPERTIES ##############
     public EngineType engineType;
     public int engineVolume;
