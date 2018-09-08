@@ -13,4 +13,10 @@ public class LpgCar extends GasolineCar {
         super(engineVolume, horsePowers, color);
         this.setEngineType(EngineType.LPG);
     }
+
+    @Override
+    public void refuel() {
+        System.out.print("Welcome to the Gas station ---> ");
+        System.out.println("Full tank LPG!!!");
+    }
 }

@@ -11,4 +11,10 @@ public class ECar extends Car {
     public ECar(int engineVolume, int horsePowers, Color color) {
         super(EngineType.ELECTRICS, engineVolume, horsePowers, color);
     }
+
+    @Override
+    public void refuel() {
+        System.out.print("Welcome to the Gas station ---> ");
+        System.out.println("Battery recharging successfully!!!");
+    }
 }

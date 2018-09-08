@@ -29,13 +29,10 @@ public abstract class Car implements ICar{
         System.out.print("SPEED UP ---> ");
         System.out.println("Bruuuum: 20 -> 40 -> 80 -> 110 -> 150");
     }
+
     public void stop() {
         System.out.print("SPEED DOWN ---> ");
         System.out.println("Psssst: ABS ON!!!");
-    }
-    public void refuel() {
-        System.out.print("Welcom to the Gas station ---> ");
-        System.out.println("Refueling!!!");
     }
 
     // ############## BEGIN GETTERS & SETTERS ##############
