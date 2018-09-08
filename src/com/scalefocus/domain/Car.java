@@ -3,7 +3,7 @@ package com.scalefocus.domain;
 import com.scalefocus.common.Color;
 import com.scalefocus.common.EngineType;
 
-public class Car {
+public abstract class Car implements ICar{
     // ############## BEGIN PROPERTIES ##############
     public EngineType engineType;
     public int engineVolume;
@@ -24,6 +24,19 @@ public class Car {
         this.color = color;
     }
     // ############## END CONSTRUCTORS ##############
+
+    public void accelerate() {
+        System.out.print("SPEED UP ---> ");
+        System.out.println("Bruuuum: 20 -> 40 -> 80 -> 110 -> 150");
+    }
+    public void stop() {
+        System.out.print("SPEED DOWN ---> ");
+        System.out.println("Psssst: ABS ON!!!");
+    }
+    public void refuel() {
+        System.out.print("Welcom to the Gas station ---> ");
+        System.out.println("Refueling!!!");
+    }
 
     // ############## BEGIN GETTERS & SETTERS ##############
     public EngineType getEgineType() {
