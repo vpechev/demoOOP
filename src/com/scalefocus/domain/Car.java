@@ -3,7 +3,7 @@ package com.scalefocus.domain;
 import com.scalefocus.common.Color;
 import com.scalefocus.common.EngineType;
 
-public abstract class Car implements ICar{
+public abstract class Car implements ICar {
     // ############## BEGIN PROPERTIES ##############
     public EngineType engineType;
     public int engineVolume;
@@ -34,7 +34,7 @@ public abstract class Car implements ICar{
         System.out.println("Psssst: ABS ON!!!");
     }
     public void refuel() {
-        System.out.print("Welcom to the Gas station ---> ");
+        System.out.print("Welcome to the Gas station ---> ");
         System.out.println("Refueling!!!");
     }
 
@@ -74,11 +74,12 @@ public abstract class Car implements ICar{
 
     @Override
     public String toString() {
-        return "Car{" +
-                "engineType=" + engineType +
-                ", engineVolume=" + engineVolume +
-                ", horsePowers=" + horsePowers +
-                ", color=" + color +
-                '}';
+        return "\nCar{\n\t" +
+                getClass().getName() + "@" + Integer.toHexString(hashCode()) + "\n\t" +
+                "engineType=" + engineType + "\n\t" +
+                "engineVolume=" + engineVolume + "\n\t" +
+                "horsePowers=" + horsePowers + "\n\t" +
+                "color=" + color + "\n" +
+                "}\n";
     }
 }
