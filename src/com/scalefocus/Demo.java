@@ -20,6 +20,8 @@ public class Demo {
         executeTaskOverItemsOfArray(cars, x -> modifyAndPrintCar((Car)x));
         System.out.println("#################################################");
         executeTaskOverItemsOfArray(cars, x -> x.refuel());
+
+        demonstrateInstaceof_GasolineCar(gasolineCar);
     }
 
     /**
@@ -41,6 +43,24 @@ public class Demo {
     private static void executeTaskOverItemsOfArray(ICar[] cars, Consumer<ICar> task){
         for(ICar car : cars){
             task.accept(car);
+        }
+    }
+
+    private static void demonstrateInstaceof_GasolineCar(ICar car) {
+        //Allow us to define the exact type of that particular object. Is is used by "down casting"
+//        if(gasolineCar instanceof DieselCar) {
+//            System.out.println("Instance gasolineCar is of type DieselCar");
+//        } else if (gasolineCar instanceof GasolineCar) {
+//            System.out.print("Instance gasolineCar is of type GasolineCar");
+//        }
+
+        //These two checks don't give us any benefit. We have to check against the most concrete child.
+        if(car instanceof Car) {
+            System.out.println("Instance gasolineCar is of type Car");
+        }
+
+        if(car instanceof ICar) {
+            System.out.println("Instance gasolineCar is of type ICar");
         }
     }
 }
