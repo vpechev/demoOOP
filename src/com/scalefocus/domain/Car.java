@@ -71,11 +71,12 @@ public abstract class Car implements ICar{
 
     @Override
     public String toString() {
-        return "Car{" +
-                "engineType=" + engineType +
-                ", engineVolume=" + engineVolume +
-                ", horsePowers=" + horsePowers +
-                ", color=" + color +
-                '}';
+        return "\nCar{\n\t" +
+                getClass().getName() + "@" + Integer.toHexString(hashCode()) + "\n\t" +
+                "engineType=" + engineType + "\n\t" +
+                "engineVolume=" + engineVolume + "\n\t" +
+                "horsePowers=" + horsePowers + "\n\t" +
+                "color=" + color + "\n" +
+                "}\n";
     }
 }
