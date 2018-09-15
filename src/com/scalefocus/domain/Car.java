@@ -1,14 +1,14 @@
 package com.scalefocus.domain;
 
 import com.scalefocus.common.Color;
+import com.scalefocus.common.EngineCharacteristics;
 import com.scalefocus.common.EngineType;
 
 public abstract class Car implements ICar{
     // ############## BEGIN PROPERTIES ##############
-    public EngineType engineType;
-    public int engineVolume;
-    public int horsePowers;
-    public Color color;
+    private EngineType engineType;
+    private EngineCharacteristics engineCharacteristics;
+    private Color color;
     // ############## END PROPERTIES ##############
 
     // ############## Begin CONSTRUCTORS ##############
@@ -16,11 +16,10 @@ public abstract class Car implements ICar{
         this.engineType = engineType;
     }
 
-    protected Car(EngineType engineType, int engineVolume, int horsePowers, Color color){
+    protected Car(EngineType engineType, EngineCharacteristics engineCharacteristics, Color color){
         this(engineType);
 
-        this.engineVolume = engineVolume;
-        this.horsePowers = horsePowers;
+        this.engineCharacteristics = engineCharacteristics;
         this.color = color;
     }
     // ############## END CONSTRUCTORS ##############
@@ -44,20 +43,16 @@ public abstract class Car implements ICar{
         this.engineType = engineType;
     }
 
-    public int getEngineVolume() {
-        return engineVolume;
+    public EngineType getEngineType() {
+        return engineType;
     }
 
-    public void setEngineVolume(int engineVolume) {
-        this.engineVolume = engineVolume;
+    public EngineCharacteristics getEngineCharacteristics() {
+        return engineCharacteristics;
     }
 
-    public int getHorsePowers() {
-        return horsePowers;
-    }
-
-    public void setHorsePowers(int horsePowers) {
-        this.horsePowers = horsePowers;
+    public void setEngineCharacteristics(EngineCharacteristics engineCharacteristics) {
+        this.engineCharacteristics = engineCharacteristics;
     }
 
     public Color getColor() {
@@ -74,8 +69,7 @@ public abstract class Car implements ICar{
         return "\nCar{\n\t" +
                 getClass().getName() + "@" + Integer.toHexString(hashCode()) + "\n\t" +
                 "engineType=" + engineType + "\n\t" +
-                "engineVolume=" + engineVolume + "\n\t" +
-                "horsePowers=" + horsePowers + "\n\t" +
+                "engineCharacteristics=" + engineCharacteristics + "\n\t" +
                 "color=" + color + "\n" +
                 "}\n";
     }

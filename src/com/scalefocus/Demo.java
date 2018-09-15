@@ -1,6 +1,7 @@
 package com.scalefocus;
 
 import com.scalefocus.common.Color;
+import com.scalefocus.common.EngineCharacteristics;
 import com.scalefocus.domain.Car;
 import com.scalefocus.domain.DieselCar;
 import com.scalefocus.domain.GasolineCar;
@@ -12,9 +13,10 @@ import java.util.List;
 public class Demo {
 
     public static void main(String[] args) {
+        EngineCharacteristics engineCharacteristics = new EngineCharacteristics(1600, 90);
         // Declare car objects
-        ICar dieselCar = new DieselCar(1600, 90, Color.YELLOW);
-        ICar gasolineCar = new GasolineCar(1800, 90, Color.YELLOW);
+        ICar dieselCar = new DieselCar(engineCharacteristics, Color.YELLOW);
+        ICar gasolineCar = new GasolineCar(engineCharacteristics, Color.YELLOW);
 
         // wrap declared objects in array
         List<ICar> cars = Arrays.asList(dieselCar, gasolineCar);

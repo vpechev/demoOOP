@@ -8,8 +8,8 @@ public class ECar extends Car {
         super(EngineType.ELECTRICS);
     }
 
-    public ECar(int engineVolume, int horsePowers, Color color) {
-        super(EngineType.ELECTRICS, engineVolume, horsePowers, color);
+    public ECar(Color color) {
+        super(EngineType.ELECTRICS, null, color);
     }
 
     @Override

@@ -1,6 +1,7 @@
 package com.scalefocus.domain;
 
 import com.scalefocus.common.Color;
+import com.scalefocus.common.EngineCharacteristics;
 import com.scalefocus.common.EngineType;
 
 public class LpgCar extends GasolineCar {
@@ -9,8 +10,8 @@ public class LpgCar extends GasolineCar {
         this.setEngineType(EngineType.LPG);
     }
 
-    public LpgCar(int engineVolume, int horsePowers, Color color) {
-        super(engineVolume, horsePowers, color);
+    public LpgCar(EngineCharacteristics engineCharacteristics, Color color) {
+        super(engineCharacteristics, color);
         this.setEngineType(EngineType.LPG);
     }
 
